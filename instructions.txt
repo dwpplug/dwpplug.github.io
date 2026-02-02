@@ -1,0 +1,3 @@
+1. Create Repo
+2. Upload All Files
+3. Enable GitHub Pages
