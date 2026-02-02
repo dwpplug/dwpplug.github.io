@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FL Studio Mobile DWP Preset</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+#countdown {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+button {
+  background: #444;
+  color: #aaa;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+button.active {
+  background: #1db954;
+  color: #fff;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>DWP Preset – FL Studio Mobile</h1>
+  <p>Please wait for the download link</p>
+
+  <!-- PUBS (Adsterra ici plus tard) -->
+  <!-- PASTE ADSTERRA CODE BELOW -->
+  
+  <div id="countdown">Wait 30 seconds...</div>
+
+  <button id="downloadBtn" disabled>
+    Download
+  </button>
+</div>
+
+<script>
+let timeLeft = 30;
+let countdown = document.getElementById("countdown");
+let button = document.getElementById("downloadBtn");
+
+let timer = setInterval(() => {
+  timeLeft--;
+  countdown.textContent = "Wait " + timeLeft + " seconds...";
+
+  if (timeLeft <= 0) {
+    clearInterval(timer);
+    countdown.textContent = "Download ready";
+    button.disabled = false;
+    button.classList.add("active");
+    button.onclick = () => {
+      window.location.href = "https://www.mediafire.com/YOUR_LINK_HERE";
+    };
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
