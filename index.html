@@ -1,92 +1,810 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FL Studio Mobile DWP Preset</title>
+<html lang="fr"><head><style>
+        @import url(https://fonts.googleapis.com/css?family=Google+Sans+Text);
+        html {
+          font-family: 'Google Sans Text', 'Google Sans';
+          font-size: 14px;
+          color-scheme: light dark;
+          background: light-dark(white, black);
+          color: light-dark(black, white);
+        }
+        </style>
+        
+        <script type="importmap">{"imports":{"@modelcontextprotocol/sdk/":"https://esm.sh/@modelcontextprotocol/sdk/dist/esm/","https://esm.sh/@modelcontextprotocol/sdk@^1.11.0/es2022/":"https://esm.sh/@modelcontextprotocol/sdk@^1.11.0/es2022/dist/esm/","https://esm.sh/@modelcontextprotocol/sdk@^1.11.0/client/index?target=es2022":"https://esm.sh/@modelcontextprotocol/sdk@^1.11.0/dist/esm/client/index?target=es2022","https://esm.sh/@modelcontextprotocol/sdk@^1.11.0/types?target=es2022":"https://esm.sh/@modelcontextprotocol/sdk@^1.11.0/dist/esm/types?target=es2022","react-router-dom":"https://esm.sh/react-router-dom@^7.13.0","react-dom/":"https://esm.sh/react-dom@^19.2.4/","react":"https://esm.sh/react@^19.2.4","react/":"https://esm.sh/react@^19.2.4/","jszip":"https://esm.sh/jszip@3.10.1","vite":"https://esm.sh/vite@^7.3.1","@vitejs/plugin-react":"https://esm.sh/@vitejs/plugin-react@^5.1.3","@/index":"data:application/javascript;base64,aW1wb3J0IHsganN4IGFzIF9qc3ggfSBmcm9tICJyZWFjdC9qc3gtcnVudGltZSI7CmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7CmltcG9ydCBSZWFjdERPTSBmcm9tICdyZWFjdC1kb20vY2xpZW50JzsKaW1wb3J0IEFwcCBmcm9tICdAL0FwcCc7CmNvbnN0IHJvb3RFbGVtZW50ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKTsKaWYgKCFyb290RWxlbWVudCkgewogICAgdGhyb3cgbmV3IEVycm9yKCJDb3VsZCBub3QgZmluZCByb290IGVsZW1lbnQgdG8gbW91bnQgdG8iKTsKfQpjb25zdCByb290ID0gUmVhY3RET00uY3JlYXRlUm9vdChyb290RWxlbWVudCk7CnJvb3QucmVuZGVyKF9qc3goUmVhY3QuU3RyaWN0TW9kZSwgeyBjaGlsZHJlbjogX2pzeChBcHAsIHt9KSB9KSk7Cg==","@":"data:application/javascript;base64,aW1wb3J0IHsganN4IGFzIF9qc3ggfSBmcm9tICJyZWFjdC9qc3gtcnVudGltZSI7CmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7CmltcG9ydCBSZWFjdERPTSBmcm9tICdyZWFjdC1kb20vY2xpZW50JzsKaW1wb3J0IEFwcCBmcm9tICdAL0FwcCc7CmNvbnN0IHJvb3RFbGVtZW50ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKTsKaWYgKCFyb290RWxlbWVudCkgewogICAgdGhyb3cgbmV3IEVycm9yKCJDb3VsZCBub3QgZmluZCByb290IGVsZW1lbnQgdG8gbW91bnQgdG8iKTsKfQpjb25zdCByb290ID0gUmVhY3RET00uY3JlYXRlUm9vdChyb290RWxlbWVudCk7CnJvb3QucmVuZGVyKF9qc3goUmVhY3QuU3RyaWN0TW9kZSwgeyBjaGlsZHJlbjogX2pzeChBcHAsIHt9KSB9KSk7Cg==","@/types":"data:application/javascript;base64,ZXhwb3J0IHt9Owo=","@/constants":"data:application/javascript;base64,ZXhwb3J0IGNvbnN0IENBVEVHT1JJRVMgPSBbCiAgICB7CiAgICAgICAgaWQ6ICcxJywKICAgICAgICBuYW1lOiAnQ2hvaXIgRXNzZW50aWFscycsCiAgICAgICAgc2x1ZzogJ2Nob2lyLWVzc2VudGlhbHMnLAogICAgICAgIGljb246ICfwn462JywKICAgICAgICBwcmVzZXRzOiBbCiAgICAgICAgICAgIHsgaWQ6ICdjMScsIG5hbWU6ICdDaG9yYWxlIEVuZmFudCcsIGRvd25sb2FkVXJsOiAnaHR0cHM6Ly93d3cubWVkaWFmaXJlLmNvbS9maWxlL3BsYWNlaG9sZGVyMScgfSwKICAgICAgICAgICAgeyBpZDogJ2MyJywgbmFtZTogJ0Nob3JhbGUgRmVtbWUnLCBkb3dubG9hZFVybDogJ2h0dHBzOi8vd3d3Lm1lZGlhZmlyZS5jb20vZmlsZS9wbGFjZWhvbGRlcjInIH0sCiAgICAgICAgICAgIHsgaWQ6ICdjMycsIG5hbWU6ICdDaG9yYWxlIEhvbW1lJywgZG93bmxvYWRVcmw6ICdodHRwczovL3d3dy5tZWRpYWZpcmUuY29tL2ZpbGUvcGxhY2Vob2xkZXIzJyB9LAogICAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICAgaWQ6ICcyJywKICAgICAgICBuYW1lOiAnVm9jYWwgUGFja3MnLAogICAgICAgIHNsdWc6ICd2b2NhbC1wYWNrcycsCiAgICAgICAgaWNvbjogJ/CfjqQnLAogICAgICAgIHByZXNldHM6IFsKICAgICAgICAgICAgeyBpZDogJ3YxJywgbmFtZTogJ0xlYWQgVm9jYWwgR29sZCcsIGRvd25sb2FkVXJsOiAnaHR0cHM6Ly93d3cubWVkaWFmaXJlLmNvbS9maWxlL3YxJyB9LAogICAgICAgICAgICB7IGlkOiAndjInLCBuYW1lOiAnQmFja2luZyBIYXJtb255JywgZG93bmxvYWRVcmw6ICdodHRwczovL3d3dy5tZWRpYWZpcmUuY29tL2ZpbGUvdjInIH0sCiAgICAgICAgXQogICAgfSwKICAgIHsKICAgICAgICBpZDogJzMnLAogICAgICAgIG5hbWU6ICdSYXJlIEluc3RydW1lbnRzJywKICAgICAgICBzbHVnOiAncmFyZS1pbnN0cnVtZW50cycsCiAgICAgICAgaWNvbjogJ/CfjrknLAogICAgICAgIHByZXNldHM6IFsKICAgICAgICAgICAgeyBpZDogJ2kxJywgbmFtZTogJ0RhcmsgUGlhbm8gRkxNJywgZG93bmxvYWRVcmw6ICdodHRwczovL3d3dy5tZWRpYWZpcmUuY29tL2ZpbGUvaTEnIH0sCiAgICAgICAgICAgIHsgaWQ6ICdpMicsIG5hbWU6ICdFdGhlcmVhbCBTdHJpbmdzJywgZG93bmxvYWRVcmw6ICdodHRwczovL3d3dy5tZWRpYWZpcmUuY29tL2ZpbGUvaTInIH0sCiAgICAgICAgXQogICAgfQpdOwpleHBvcnQgY29uc3QgQVBQX0NPTkZJRyA9IHsKICAgIHRpdGxlOiAiVFdCIFBsdWciLAogICAgZGVzY3JpcHRpb246ICJQcmVzZXRzIEZMIFN0dWRpbyBNb2JpbGUgdHLDqHMgcmFyZXMgcG91ciBjaG9yYWxlcywgdm9peCBldCBpbnN0cnVtZW50cyIsCiAgICB0aW1lclNlY29uZHM6IDMwLAp9Owo=","@/App":"data:application/javascript;base64,aW1wb3J0IHsganN4IGFzIF9qc3gsIGpzeHMgYXMgX2pzeHMgfSBmcm9tICJyZWFjdC9qc3gtcnVudGltZSI7CmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7CmltcG9ydCB7IEhhc2hSb3V0ZXIsIFJvdXRlcywgUm91dGUgfSBmcm9tICdyZWFjdC1yb3V0ZXItZG9tJzsKaW1wb3J0IEhvbWVQYWdlIGZyb20gJ0AvcGFnZXMvSG9tZVBhZ2UnOwppbXBvcnQgQ2F0ZWdvcnlQYWdlIGZyb20gJ0AvcGFnZXMvQ2F0ZWdvcnlQYWdlJzsKaW1wb3J0IERvd25sb2FkUGFnZSBmcm9tICdAL3BhZ2VzL0Rvd25sb2FkUGFnZSc7CmNvbnN0IEFwcCA9ICgpID0+IHsKICAgIHJldHVybiAoX2pzeChIYXNoUm91dGVyLCB7IGNoaWxkcmVuOiBfanN4cygiZGl2IiwgeyBjbGFzc05hbWU6ICJtYXgtdy1tZCBteC1hdXRvIG1pbi1oLXNjcmVlbiBmbGV4IGZsZXgtYXV0byBmbGV4LWNvbCBweC02IHB5LTEwIG92ZXJmbG93LXgtaGlkZGVuIiwgY2hpbGRyZW46IFtfanN4cyhSb3V0ZXMsIHsgY2hpbGRyZW46IFtfanN4KFJvdXRlLCB7IHBhdGg6ICIvIiwgZWxlbWVudDogX2pzeChIb21lUGFnZSwge30pIH0pLCBfanN4KFJvdXRlLCB7IHBhdGg6ICIvY2F0ZWdvcnkvOnNsdWciLCBlbGVtZW50OiBfanN4KENhdGVnb3J5UGFnZSwge30pIH0pLCBfanN4KFJvdXRlLCB7IHBhdGg6ICIvZG93bmxvYWQvOmNhdGVnb3J5SWQvOnByZXNldElkIiwgZWxlbWVudDogX2pzeChEb3dubG9hZFBhZ2UsIHt9KSB9KV0gfSksIF9qc3hzKCJmb290ZXIiLCB7IGNsYXNzTmFtZTogIm10LWF1dG8gcHQtMTAgdGV4dC1jZW50ZXIgb3BhY2l0eS01MCB0ZXh0LXhzIiwgY2hpbGRyZW46IFsiXHUwMEE5ICIsIG5ldyBEYXRlKCkuZ2V0RnVsbFllYXIoKSwgIiBUV0IgUGx1Zy4gVG91cyBkcm9pdHMgclx1MDBFOXNlcnZcdTAwRTlzLiJdIH0pXSB9KSB9KSk7Cn07CmV4cG9ydCBkZWZhdWx0IEFwcDsK","@/components/Logo":"data:application/javascript;base64,aW1wb3J0IHsganN4IGFzIF9qc3gsIGpzeHMgYXMgX2pzeHMgfSBmcm9tICJyZWFjdC9qc3gtcnVudGltZSI7CmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7CmNvbnN0IExvZ28gPSAoKSA9PiB7CiAgICByZXR1cm4gKF9qc3hzKCJkaXYiLCB7IGNsYXNzTmFtZTogImZsZXggZmxleC1jb2wgaXRlbXMtY2VudGVyIG1iLTYiLCBjaGlsZHJlbjogW19qc3goImRpdiIsIHsgY2xhc3NOYW1lOiAidy0yNCBoLTI0IGJnLVsjYjg4NjBiXSByb3VuZGVkLWZ1bGwgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgYm9yZGVyLTQgYm9yZGVyLWJsYWNrIHNoYWRvdy14bCBtYi00IG92ZXJmbG93LWhpZGRlbiBiZy1vcGFjaXR5LTkwIiwgY2hpbGRyZW46IF9qc3goInNwYW4iLCB7IGNsYXNzTmFtZTogInRleHQtNHhsIGZvbnQtYm9sZCB0ZXh0LWJsYWNrIHNlbGVjdC1ub25lIiwgY2hpbGRyZW46ICJUV0IiIH0pIH0pLCBfanN4KCJoMSIsIHsgY2xhc3NOYW1lOiAidGV4dC0zeGwgZm9udC1ib2xkIHRyYWNraW5nLXRpZ2h0IiwgY2hpbGRyZW46ICJUV0IgUGx1ZyIgfSldIH0pKTsKfTsKZXhwb3J0IGRlZmF1bHQgTG9nbzsK","@/components/LinkButton":"data:application/javascript;base64,aW1wb3J0IHsganN4IGFzIF9qc3gsIGpzeHMgYXMgX2pzeHMsIEZyYWdtZW50IGFzIF9GcmFnbWVudCB9IGZyb20gInJlYWN0L2pzeC1ydW50aW1lIjsKaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JzsKaW1wb3J0IHsgTGluayB9IGZyb20gJ3JlYWN0LXJvdXRlci1kb20nOwpjb25zdCBMaW5rQnV0dG9uID0gKHsgdG8sIG9uQ2xpY2ssIGNoaWxkcmVuLCBpY29uLCB2YXJpYW50ID0gJ3ByaW1hcnknIH0pID0+IHsKICAgIGNvbnN0IGJhc2VTdHlsZXMgPSAidy1mdWxsIHB5LTQgcHgtNiByb3VuZGVkLXhsIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiB0cmFuc2l0aW9uLWFsbCBkdXJhdGlvbi0zMDAgdHJhbnNmb3JtIGFjdGl2ZTpzY2FsZS05NSBzaGFkb3ctbWQgbWItNCB0ZXh0LWxnIGZvbnQtc2VtaWJvbGQgYm9yZGVyIjsKICAgIGNvbnN0IHZhcmlhbnRzID0gewogICAgICAgIHByaW1hcnk6ICJiZy13aGl0ZS8xMCBob3ZlcjpiZy13aGl0ZS8yMCBib3JkZXItd2hpdGUvMTAgdGV4dC13aGl0ZSIsCiAgICAgICAgb3V0bGluZTogImJnLXRyYW5zcGFyZW50IGJvcmRlci1bI2I4ODYwYl0gdGV4dC1bI2I4ODYwYl0gaG92ZXI6YmctWyNiODg2MGJdLzEwIgogICAgfTsKICAgIGNvbnN0IGNvbnRlbnQgPSAoX2pzeHMoX0ZyYWdtZW50LCB7IGNoaWxkcmVuOiBbX2pzeHMoInNwYW4iLCB7IGNsYXNzTmFtZTogImZsZXggaXRlbXMtY2VudGVyIGdhcC0zIiwgY2hpbGRyZW46IFtpY29uICYmIF9qc3goInNwYW4iLCB7IGNoaWxkcmVuOiBpY29uIH0pLCBjaGlsZHJlbl0gfSksIF9qc3goInN2ZyIsIHsgY2xhc3NOYW1lOiAidy01IGgtNSBvcGFjaXR5LTUwIiwgZmlsbDogIm5vbmUiLCBzdHJva2U6ICJjdXJyZW50Q29sb3IiLCB2aWV3Qm94OiAiMCAwIDI0IDI0IiwgY2hpbGRyZW46IF9qc3goInBhdGgiLCB7IHN0cm9rZUxpbmVjYXA6ICJyb3VuZCIsIHN0cm9rZUxpbmVqb2luOiAicm91bmQiLCBzdHJva2VXaWR0aDogMiwgZDogIk05IDVsNyA3LTcgNyIgfSkgfSldIH0pKTsKICAgIGlmICh0bykgewogICAgICAgIHJldHVybiAoX2pzeChMaW5rLCB7IHRvOiB0bywgY2xhc3NOYW1lOiBgJHtiYXNlU3R5bGVzfSAke3ZhcmlhbnRzW3ZhcmlhbnRdfWAsIGNoaWxkcmVuOiBjb250ZW50IH0pKTsKICAgIH0KICAgIHJldHVybiAoX2pzeCgiYnV0dG9uIiwgeyBvbkNsaWNrOiBvbkNsaWNrLCBjbGFzc05hbWU6IGAke2Jhc2VTdHlsZXN9ICR7dmFyaWFudHNbdmFyaWFudF19YCwgY2hpbGRyZW46IGNvbnRlbnQgfSkpOwp9OwpleHBvcnQgZGVmYXVsdCBMaW5rQnV0dG9uOwo=","@/pages/HomePage":"data:application/javascript;base64,aW1wb3J0IHsganN4IGFzIF9qc3gsIGpzeHMgYXMgX2pzeHMgfSBmcm9tICJyZWFjdC9qc3gtcnVudGltZSI7CmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7CmltcG9ydCBMb2dvIGZyb20gJ0AvY29tcG9uZW50cy9Mb2dvJzsKaW1wb3J0IExpbmtCdXR0b24gZnJvbSAnQC9jb21wb25lbnRzL0xpbmtCdXR0b24nOwppbXBvcnQgeyBDQVRFR09SSUVTLCBBUFBfQ09ORklHIH0gZnJvbSAnQC9jb25zdGFudHMnOwovLyBAdHMtaWdub3JlCmltcG9ydCBKU1ppcCBmcm9tICdqc3ppcCc7CmNvbnN0IEhvbWVQYWdlID0gKCkgPT4gewogICAgY29uc3QgaGFuZGxlRXhwb3J0UHJvamVjdCA9IGFzeW5jICgpID0+IHsKICAgICAgICBjb25zdCB6aXAgPSBuZXcgSlNaaXAoKTsKICAgICAgICAvLyBMaXN0ZSBkZXMgZmljaGllcnMgw6AgaW5jbHVyZSAob24gcsOpY3Vww6hyZSBsZXMgY29udGVudXMgdmlhIGZldGNoIG91IG9uIGxlcyBkw6lmaW5pdCBpY2kpCiAgICAgICAgLy8gTm90ZTogRGFucyBjZXQgZW52aXJvbm5lbWVudCwgbm91cyByZWNyw6lvbnMgbGUgWklQIGF2ZWMgbGVzIHZlcnNpb25zIGFjdHVlbGxlcyBkdSBjb2RlLgogICAgICAgIGNvbnN0IGZpbGVzID0gewogICAgICAgICAgICAicGFja2FnZS5qc29uIjogYHsKICAibmFtZSI6ICJ0d2ItcGx1Zy1sYW5kaW5nLXBhZ2UiLAogICJwcml2YXRlIjogdHJ1ZSwKICAidmVyc2lvbiI6ICIxLjAuMCIsCiAgInR5cGUiOiAibW9kdWxlIiwKICAic2NyaXB0cyI6IHsKICAgICJkZXYiOiAidml0ZSIsCiAgICAiYnVpbGQiOiAidHNjICYmIHZpdGUgYnVpbGQiLAogICAgInByZXZpZXciOiAidml0ZSBwcmV2aWV3IgogIH0sCiAgImRlcGVuZGVuY2llcyI6IHsKICAgICJyZWFjdCI6ICJeMTkuMC4wIiwKICAgICJyZWFjdC1kb20iOiAiXjE5LjAuMCIsCiAgICAicmVhY3Qtcm91dGVyLWRvbSI6ICJeNy4xLjAiCiAgfSwKICAiZGV2RGVwZW5kZW5jaWVzIjogewogICAgIkB0eXBlcy9yZWFjdCI6ICJeMTkuMC4wIiwKICAgICJAdHlwZXMvcmVhY3QtZG9tIjogIl4xOS4wLjAiLAogICAgIkB2aXRlanMvcGx1Z2luLXJlYWN0IjogIl40LjMuNCIsCiAgICAiYXV0b3ByZWZpeGVyIjogIl4xMC40LjIwIiwKICAgICJwb3N0Y3NzIjogIl44LjQuNDkiLAogICAgInRhaWx3aW5kY3NzIjogIl4zLjQuMTYiLAogICAgInR5cGVzY3JpcHQiOiAiXjUuNy4yIiwKICAgICJ2aXRlIjogIl42LjAuMyIKICB9Cn1gLAogICAgICAgICAgICAidml0ZS5jb25maWcudHMiOiBgaW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAndml0ZSc7CmltcG9ydCByZWFjdCBmcm9tICdAdml0ZWpzL3BsdWdpbi1yZWFjdCc7CgpleHBvcnQgZGVmYXVsdCBkZWZpbmVDb25maWcoewogIHBsdWdpbnM6IFtyZWFjdCgpXSwKICBiYXNlOiAnLi8nLAp9KTtgLAogICAgICAgICAgICAidHNjb25maWcuanNvbiI6IGB7CiAgImNvbXBpbGVyT3B0aW9ucyI6IHsKICAgICJ0YXJnZXQiOiAiRVNOZXh0IiwKICAgICJ1c2VEZWZpbmVGb3JDbGFzc0ZpZWxkcyI6IHRydWUsCiAgICAibGliIjogWyJET00iLCAiRE9NLkl0ZXJhYmxlIiwgIkVTTmV4dCJdLAogICAgImFsbG93SnMiOiBmYWxzZSwKICAgICJza2lwTGliQ2hlY2siOiB0cnVlLAogICAgImVzTW9kdWxlSW50ZXJvcCI6IGZhbHNlLAogICAgImFsbG93U3ludGhldGljRGVmYXVsdEltcG9ydHMiOiB0cnVlLAogICAgInN0cmljdCI6IHRydWUsCiAgICAiZm9yY2VDb25zaXN0ZW50Q2FzaW5nSW5GaWxlTmFtZXMiOiB0cnVlLAogICAgIm1vZHVsZSI6ICJFU05leHQiLAogICAgIm1vZHVsZVJlc29sdXRpb24iOiAiTm9kZSIsCiAgICAicmVzb2x2ZUpzb25Nb2R1bGUiOiB0cnVlLAogICAgImlzb2xhdGVkTW9kdWxlcyI6IHRydWUsCiAgICAibm9FbWl0IjogdHJ1ZSwKICAgICJqc3giOiAicmVhY3QtanN4IgogIH0sCiAgImluY2x1ZGUiOiBbIioqLyoudHMiLCAiKiovKi50c3giXSwKICAiZXhjbHVkZSI6IFsibm9kZV9tb2R1bGVzIl0KfWAsCiAgICAgICAgICAgICJSRUFETUUubWQiOiBgIyBUV0IgUGx1ZwpIw6liZXJnZW1lbnQgc3VyIEdpdEh1YiBQYWdlczoKMS4gbnBtIGluc3RhbGwKMi4gbnBtIHJ1biBidWlsZAozLiBVcGxvYWRlciBsZSBkb3NzaWVyIGRpc3QvYCwKICAgICAgICAgICAgImluZGV4Lmh0bWwiOiBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQub3V0ZXJIVE1MLAogICAgICAgIH07CiAgICAgICAgLy8gT24gYWpvdXRlIHRvdXMgbGVzIGZpY2hpZXJzIGF1IFpJUAogICAgICAgIE9iamVjdC5lbnRyaWVzKGZpbGVzKS5mb3JFYWNoKChbcGF0aCwgY29udGVudF0pID0+IHsKICAgICAgICAgICAgemlwLmZpbGUocGF0aCwgY29udGVudCk7CiAgICAgICAgfSk7CiAgICAgICAgLy8gR8OpbsOpcmF0aW9uIGR1IFpJUAogICAgICAgIGNvbnN0IGNvbnRlbnQgPSBhd2FpdCB6aXAuZ2VuZXJhdGVBc3luYyh7IHR5cGU6ICJibG9iIiB9KTsKICAgICAgICBjb25zdCB1cmwgPSBVUkwuY3JlYXRlT2JqZWN0VVJMKGNvbnRlbnQpOwogICAgICAgIGNvbnN0IGxpbmsgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJhIik7CiAgICAgICAgbGluay5ocmVmID0gdXJsOwogICAgICAgIGxpbmsuZG93bmxvYWQgPSAidHdiLXBsdWctcHJvamVjdC56aXAiOwogICAgICAgIGRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQobGluayk7CiAgICAgICAgbGluay5jbGljaygpOwogICAgICAgIGRvY3VtZW50LmJvZHkucmVtb3ZlQ2hpbGQobGluayk7CiAgICB9OwogICAgcmV0dXJuIChfanN4cygiZGl2IiwgeyBjbGFzc05hbWU6ICJmbGV4IGZsZXgtY29sIGl0ZW1zLWNlbnRlciBhbmltYXRlLWZhZGVJbiIsIGNoaWxkcmVuOiBbX2pzeChMb2dvLCB7fSksIF9qc3hzKCJwIiwgeyBjbGFzc05hbWU6ICJ0ZXh0LWNlbnRlciB0ZXh0LXNtIHRleHQtZ3JheS0zMDAgbWItMTAgbWF4LXcteHMgbGVhZGluZy1yZWxheGVkIGl0YWxpYyIsIGNoaWxkcmVuOiBbIlwiIiwgQVBQX0NPTkZJRy5kZXNjcmlwdGlvbiwgIlwiIl0gfSksIF9qc3goImRpdiIsIHsgY2xhc3NOYW1lOiAidy1mdWxsIHNwYWNlLXktMSIsIGNoaWxkcmVuOiBDQVRFR09SSUVTLm1hcCgoY2F0KSA9PiAoX2pzeChMaW5rQnV0dG9uLCB7IHRvOiBgL2NhdGVnb3J5LyR7Y2F0LnNsdWd9YCwgaWNvbjogY2F0Lmljb24sIGNoaWxkcmVuOiBjYXQubmFtZSB9LCBjYXQuaWQpKSkgfSksIF9qc3hzKCJkaXYiLCB7IGNsYXNzTmFtZTogIm10LTEyIGZsZXggZmxleC1jb2wgaXRlbXMtY2VudGVyIHNwYWNlLXktNCIsIGNoaWxkcmVuOiBbX2pzeCgicCIsIHsgY2xhc3NOYW1lOiAidGV4dC14cyB0ZXh0LWdyYXktNDAwIHVwcGVyY2FzZSB0cmFja2luZy13aWRlc3QiLCBjaGlsZHJlbjogIlN1aXZlei1ub3VzIiB9KSwgX2pzeHMoImRpdiIsIHsgY2xhc3NOYW1lOiAiZmxleCBnYXAtNiIsIGNoaWxkcmVuOiBbX2pzeCgiYSIsIHsgaHJlZjogIiMiLCBjbGFzc05hbWU6ICJob3Zlcjp0ZXh0LVsjYjg4NjBiXSB0cmFuc2l0aW9uLWNvbG9ycyIsIGNoaWxkcmVuOiAiWW91VHViZSIgfSksIF9qc3goImEiLCB7IGhyZWY6ICIjIiwgY2xhc3NOYW1lOiAiaG92ZXI6dGV4dC1bI2I4ODYwYl0gdHJhbnNpdGlvbi1jb2xvcnMiLCBjaGlsZHJlbjogIlRlbGVncmFtIiB9KSwgX2pzeCgiYSIsIHsgaHJlZjogIiMiLCBjbGFzc05hbWU6ICJob3Zlcjp0ZXh0LVsjYjg4NjBiXSB0cmFuc2l0aW9uLWNvbG9ycyIsIGNoaWxkcmVuOiAiSW5zdGFncmFtIiB9KV0gfSldIH0pLCBfanN4cygiYnV0dG9uIiwgeyBvbkNsaWNrOiBoYW5kbGVFeHBvcnRQcm9qZWN0LCBjbGFzc05hbWU6ICJtdC0xNiB0ZXh0LVsxMHB4XSB0ZXh0LXdoaXRlLzIwIGhvdmVyOnRleHQtd2hpdGUvNjAgdHJhbnNpdGlvbi1jb2xvcnMgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgYm9yZGVyIGJvcmRlci13aGl0ZS8xMCBweC0zIHB5LTEgcm91bmRlZC1mdWxsIiwgY2hpbGRyZW46IFtfanN4KCJzdmciLCB7IGNsYXNzTmFtZTogInctMyBoLTMiLCBmaWxsOiAibm9uZSIsIHN0cm9rZTogImN1cnJlbnRDb2xvciIsIHZpZXdCb3g6ICIwIDAgMjQgMjQiLCBjaGlsZHJlbjogX2pzeCgicGF0aCIsIHsgc3Ryb2tlTGluZWNhcDogInJvdW5kIiwgc3Ryb2tlTGluZWpvaW46ICJyb3VuZCIsIHN0cm9rZVdpZHRoOiAyLCBkOiAiTTQgMTZ2MWEzIDMgMCAwMDMgM2gxMGEzIDMgMCAwMDMtM3YtMW0tNC00bC00IDRtMCAwbC00LTRtNCA0VjQiIH0pIH0pLCAiRXhwb3J0ZXIgbGUgY29kZSAoLnppcCkiXSB9KV0gfSkpOwp9OwpleHBvcnQgZGVmYXVsdCBIb21lUGFnZTsK","@/pages/CategoryPage":"data:application/javascript;base64,aW1wb3J0IHsganN4IGFzIF9qc3gsIGpzeHMgYXMgX2pzeHMgfSBmcm9tICJyZWFjdC9qc3gtcnVudGltZSI7CmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7CmltcG9ydCB7IHVzZVBhcmFtcywgTGluayB9IGZyb20gJ3JlYWN0LXJvdXRlci1kb20nOwppbXBvcnQgeyBDQVRFR09SSUVTIH0gZnJvbSAnQC9jb25zdGFudHMnOwppbXBvcnQgTGlua0J1dHRvbiBmcm9tICdAL2NvbXBvbmVudHMvTGlua0J1dHRvbic7CmNvbnN0IENhdGVnb3J5UGFnZSA9ICgpID0+IHsKICAgIGNvbnN0IHsgc2x1ZyB9ID0gdXNlUGFyYW1zKCk7CiAgICBjb25zdCBjYXRlZ29yeSA9IENBVEVHT1JJRVMuZmluZChjID0+IGMuc2x1ZyA9PT0gc2x1Zyk7CiAgICBpZiAoIWNhdGVnb3J5KSB7CiAgICAgICAgcmV0dXJuIChfanN4cygiZGl2IiwgeyBjbGFzc05hbWU6ICJ0ZXh0LWNlbnRlciBtdC0xMCIsIGNoaWxkcmVuOiBbX2pzeCgicCIsIHsgY2xhc3NOYW1lOiAibWItNCIsIGNoaWxkcmVuOiAiQ2F0XHUwMEU5Z29yaWUgbm9uIHRyb3V2XHUwMEU5ZS4iIH0pLCBfanN4KExpbmssIHsgdG86ICIvIiwgY2xhc3NOYW1lOiAidGV4dC1bI2I4ODYwYl0gdW5kZXJsaW5lIiwgY2hpbGRyZW46ICJSZXRvdXIgXHUwMEUwIGwnYWNjdWVpbCIgfSldIH0pKTsKICAgIH0KICAgIHJldHVybiAoX2pzeHMoImRpdiIsIHsgY2xhc3NOYW1lOiAiYW5pbWF0ZS1mYWRlSW4iLCBjaGlsZHJlbjogW19qc3hzKCJkaXYiLCB7IGNsYXNzTmFtZTogImZsZXggaXRlbXMtY2VudGVyIG1iLTgiLCBjaGlsZHJlbjogW19qc3goTGluaywgeyB0bzogIi8iLCBjbGFzc05hbWU6ICJtci00IHAtMiBiZy13aGl0ZS81IHJvdW5kZWQtZnVsbCBob3ZlcjpiZy13aGl0ZS8xMCB0cmFuc2l0aW9uLWNvbG9ycyIsIGNoaWxkcmVuOiBfanN4KCJzdmciLCB7IGNsYXNzTmFtZTogInctNiBoLTYiLCBmaWxsOiAibm9uZSIsIHN0cm9rZTogImN1cnJlbnRDb2xvciIsIHZpZXdCb3g6ICIwIDAgMjQgMjQiLCBjaGlsZHJlbjogX2pzeCgicGF0aCIsIHsgc3Ryb2tlTGluZWNhcDogInJvdW5kIiwgc3Ryb2tlTGluZWpvaW46ICJyb3VuZCIsIHN0cm9rZVdpZHRoOiAyLCBkOiAiTTE1IDE5bC03LTcgNy03IiB9KSB9KSB9KSwgX2pzeHMoImgyIiwgeyBjbGFzc05hbWU6ICJ0ZXh0LTJ4bCBmb250LWJvbGQgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIiLCBjaGlsZHJlbjogW2NhdGVnb3J5Lmljb24sICIgIiwgY2F0ZWdvcnkubmFtZV0gfSldIH0pLCBfanN4cygiZGl2IiwgeyBjbGFzc05hbWU6ICJtYi04IiwgY2hpbGRyZW46IFtfanN4KCJwIiwgeyBjbGFzc05hbWU6ICJ0ZXh0LXNtIHRleHQtZ3JheS00MDAgbWItNCBweC0yIiwgY2hpbGRyZW46ICJTXHUwMEU5bGVjdGlvbm5leiB2b3RyZSBwcmVzZXQgY2ktZGVzc291cyBwb3VyIGxhbmNlciBsZSB0XHUwMEU5bFx1MDBFOWNoYXJnZW1lbnQuIiB9KSwgY2F0ZWdvcnkucHJlc2V0cy5tYXAoKHByZXNldCkgPT4gKF9qc3goTGlua0J1dHRvbiwgeyB0bzogYC9kb3dubG9hZC8ke2NhdGVnb3J5LmlkfS8ke3ByZXNldC5pZH1gLCB2YXJpYW50OiAicHJpbWFyeSIsIGNoaWxkcmVuOiBwcmVzZXQubmFtZSB9LCBwcmVzZXQuaWQpKSldIH0pLCBfanN4KExpbmtCdXR0b24sIHsgdG86ICIvIiwgdmFyaWFudDogIm91dGxpbmUiLCBjaGlsZHJlbjogIlRvdXRlcyBsZXMgY2F0XHUwMEU5Z29yaWVzIiB9KV0gfSkpOwp9OwpleHBvcnQgZGVmYXVsdCBDYXRlZ29yeVBhZ2U7Cg==","@/pages/DownloadPage":"data:application/javascript;base64,aW1wb3J0IHsganN4IGFzIF9qc3gsIGpzeHMgYXMgX2pzeHMgfSBmcm9tICJyZWFjdC9qc3gtcnVudGltZSI7CmltcG9ydCBSZWFjdCwgeyB1c2VTdGF0ZSwgdXNlRWZmZWN0IH0gZnJvbSAncmVhY3QnOwppbXBvcnQgeyB1c2VQYXJhbXMsIExpbmsgfSBmcm9tICdyZWFjdC1yb3V0ZXItZG9tJzsKaW1wb3J0IHsgQ0FURUdPUklFUywgQVBQX0NPTkZJRyB9IGZyb20gJ0AvY29uc3RhbnRzJzsKY29uc3QgRG93bmxvYWRQYWdlID0gKCkgPT4gewogICAgY29uc3QgeyBjYXRlZ29yeUlkLCBwcmVzZXRJZCB9ID0gdXNlUGFyYW1zKCk7CiAgICBjb25zdCBbdGltZUxlZnQsIHNldFRpbWVMZWZ0XSA9IHVzZVN0YXRlKEFQUF9DT05GSUcudGltZXJTZWNvbmRzKTsKICAgIGNvbnN0IFtpc1JlYWR5LCBzZXRJc1JlYWR5XSA9IHVzZVN0YXRlKGZhbHNlKTsKICAgIGNvbnN0IGNhdGVnb3J5ID0gQ0FURUdPUklFUy5maW5kKGMgPT4gYy5pZCA9PT0gY2F0ZWdvcnlJZCk7CiAgICBjb25zdCBwcmVzZXQgPSBjYXRlZ29yeT8ucHJlc2V0cy5maW5kKHAgPT4gcC5pZCA9PT0gcHJlc2V0SWQpOwogICAgdXNlRWZmZWN0KCgpID0+IHsKICAgICAgICBpZiAodGltZUxlZnQgPiAwKSB7CiAgICAgICAgICAgIGNvbnN0IHRpbWVyID0gc2V0SW50ZXJ2YWwoKCkgPT4gewogICAgICAgICAgICAgICAgc2V0VGltZUxlZnQocHJldiA9PiBwcmV2IC0gMSk7CiAgICAgICAgICAgIH0sIDEwMDApOwogICAgICAgICAgICByZXR1cm4gKCkgPT4gY2xlYXJJbnRlcnZhbCh0aW1lcik7CiAgICAgICAgfQogICAgICAgIGVsc2UgewogICAgICAgICAgICBzZXRJc1JlYWR5KHRydWUpOwogICAgICAgIH0KICAgIH0sIFt0aW1lTGVmdF0pOwogICAgaWYgKCFwcmVzZXQpIHsKICAgICAgICByZXR1cm4gKF9qc3hzKCJkaXYiLCB7IGNsYXNzTmFtZTogInRleHQtY2VudGVyIG10LTEwIiwgY2hpbGRyZW46IFtfanN4KCJwIiwgeyBjbGFzc05hbWU6ICJtYi00IiwgY2hpbGRyZW46ICJMaWVuIGRlIHRcdTAwRTlsXHUwMEU5Y2hhcmdlbWVudCBpbnZhbGlkZS4iIH0pLCBfanN4KExpbmssIHsgdG86ICIvIiwgY2xhc3NOYW1lOiAidGV4dC1bI2I4ODYwYl0gdW5kZXJsaW5lIiwgY2hpbGRyZW46ICJSZXRvdXIgXHUwMEUwIGwnYWNjdWVpbCIgfSldIH0pKTsKICAgIH0KICAgIGNvbnN0IGhhbmRsZURvd25sb2FkID0gKCkgPT4gewogICAgICAgIGlmIChpc1JlYWR5KSB7CiAgICAgICAgICAgIHdpbmRvdy5sb2NhdGlvbi5ocmVmID0gcHJlc2V0LmRvd25sb2FkVXJsOwogICAgICAgIH0KICAgIH07CiAgICByZXR1cm4gKF9qc3hzKCJkaXYiLCB7IGNsYXNzTmFtZTogImZsZXggZmxleC1jb2wgaXRlbXMtY2VudGVyIGFuaW1hdGUtZmFkZUluIiwgY2hpbGRyZW46IFtfanN4KCJkaXYiLCB7IGNsYXNzTmFtZTogInctZnVsbCBmbGV4IGp1c3RpZnktc3RhcnQgbWItOCIsIGNoaWxkcmVuOiBfanN4KExpbmssIHsgdG86IGAvY2F0ZWdvcnkvJHtjYXRlZ29yeT8uc2x1Z31gLCBjbGFzc05hbWU6ICJwLTIgYmctd2hpdGUvNSByb3VuZGVkLWZ1bGwgaG92ZXI6Ymctd2hpdGUvMTAgdHJhbnNpdGlvbi1jb2xvcnMiLCBjaGlsZHJlbjogX2pzeCgic3ZnIiwgeyBjbGFzc05hbWU6ICJ3LTYgaC02IiwgZmlsbDogIm5vbmUiLCBzdHJva2U6ICJjdXJyZW50Q29sb3IiLCB2aWV3Qm94OiAiMCAwIDI0IDI0IiwgY2hpbGRyZW46IF9qc3goInBhdGgiLCB7IHN0cm9rZUxpbmVjYXA6ICJyb3VuZCIsIHN0cm9rZUxpbmVqb2luOiAicm91bmQiLCBzdHJva2VXaWR0aDogMiwgZDogIk0xNSAxOWwtNy03IDctNyIgfSkgfSkgfSkgfSksIF9qc3hzKCJkaXYiLCB7IGNsYXNzTmFtZTogImJnLXdoaXRlLzUgdy1mdWxsIHJvdW5kZWQtMnhsIHAtNiB0ZXh0LWNlbnRlciBib3JkZXIgYm9yZGVyLXdoaXRlLzEwIHNoYWRvdy0yeGwgbWItOCIsIGNoaWxkcmVuOiBbX2pzeHMoImgyIiwgeyBjbGFzc05hbWU6ICJ0ZXh0LXhsIGZvbnQtYm9sZCBtYi0yIiwgY2hpbGRyZW46IFsiUHJlc2V0OiAiLCBwcmVzZXQubmFtZV0gfSksIF9qc3goInAiLCB7IGNsYXNzTmFtZTogInRleHQtc20gdGV4dC1ncmF5LTQwMCBtYi02IiwgY2hpbGRyZW46ICJQclx1MDBFOXBhcmF0aW9uIGRlIHZvdHJlIGZpY2hpZXIgRkwgU3R1ZGlvIE1vYmlsZS4uLiIgfSksIF9qc3hzKCJkaXYiLCB7IGNsYXNzTmFtZTogInctZnVsbCBiZy1ncmF5LTgwMCBoLTMyIHJvdW5kZWQtbGcgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgYm9yZGVyIGJvcmRlci1ncmF5LTcwMCBtYi02IGdyb3VwIHJlbGF0aXZlIG92ZXJmbG93LWhpZGRlbiIsIGNoaWxkcmVuOiBbX2pzeCgiZGl2IiwgeyBjbGFzc05hbWU6ICJhYnNvbHV0ZSBpbnNldC0wIGJnLVsjYjg4NjBiXS81IGFuaW1hdGUtcHVsc2UiIH0pLCBfanN4KCJwIiwgeyBjbGFzc05hbWU6ICJ0ZXh0LXhzIHRleHQtZ3JheS01MDAgei0xMCIsIGNoaWxkcmVuOiAiUFVCTElDSVRcdTAwQzkgKFByb3BlbGxlciBBZHMgLyBBZHN0ZXJyYSkiIH0pXSB9KSwgX2pzeCgiZGl2IiwgeyBjbGFzc05hbWU6ICJtYi02IiwgY2hpbGRyZW46ICFpc1JlYWR5ID8gKF9qc3hzKCJkaXYiLCB7IGNsYXNzTmFtZTogInNwYWNlLXktNCIsIGNoaWxkcmVuOiBbX2pzeHMoImRpdiIsIHsgY2xhc3NOYW1lOiAicmVsYXRpdmUgdy0yNCBoLTI0IG14LWF1dG8iLCBjaGlsZHJlbjogW19qc3hzKCJzdmciLCB7IGNsYXNzTmFtZTogInctZnVsbCBoLWZ1bGwgdHJhbnNmb3JtIC1yb3RhdGUtOTAiLCBjaGlsZHJlbjogW19qc3goImNpcmNsZSIsIHsgY3g6ICI0OCIsIGN5OiAiNDgiLCByOiAiNDAiLCBmaWxsOiAibm9uZSIsIHN0cm9rZTogInJnYmEoMjU1LDI1NSwyNTUsMC4xKSIsIHN0cm9rZVdpZHRoOiAiOCIgfSksIF9qc3goImNpcmNsZSIsIHsgY3g6ICI0OCIsIGN5OiAiNDgiLCByOiAiNDAiLCBmaWxsOiAibm9uZSIsIHN0cm9rZTogIiNiODg2MGIiLCBzdHJva2VXaWR0aDogIjgiLCBzdHJva2VEYXNoYXJyYXk6IDI1MS4yLCBzdHJva2VEYXNob2Zmc2V0OiAyNTEuMiAtICgyNTEuMiAqIChBUFBfQ09ORklHLnRpbWVyU2Vjb25kcyAtIHRpbWVMZWZ0KSkgLyBBUFBfQ09ORklHLnRpbWVyU2Vjb25kcywgY2xhc3NOYW1lOiAidHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMTAwMCBlYXNlLWxpbmVhciIgfSldIH0pLCBfanN4cygiZGl2IiwgeyBjbGFzc05hbWU6ICJhYnNvbHV0ZSBpbnNldC0wIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHRleHQtMnhsIGZvbnQtYm9sZCIsIGNoaWxkcmVuOiBbdGltZUxlZnQsICJzIl0gfSldIH0pLCBfanN4KCJwIiwgeyBjbGFzc05hbWU6ICJ0ZXh0LXNtIGZvbnQtbWVkaXVtIGFuaW1hdGUtcHVsc2UiLCBjaGlsZHJlbjogIlZldWlsbGV6IHBhdGllbnRlciBwb3VyIGxlIGxpZW4uLi4iIH0pXSB9KSkgOiAoX2pzeHMoImJ1dHRvbiIsIHsgb25DbGljazogaGFuZGxlRG93bmxvYWQsIGNsYXNzTmFtZTogInctZnVsbCBweS01IGJnLVsjYjg4NjBiXSBob3ZlcjpiZy1bIzlhNzAwOF0gdGV4dC1ibGFjayBmb250LWJsYWNrIHRleHQteGwgcm91bmRlZC14bCBzaGFkb3ctWzBfMF8yMHB4X3JnYmEoMTg0LDEzNCwxMSwwLjQpXSB0cmFuc2l0aW9uLWFsbCB0cmFuc2Zvcm0gYWN0aXZlOnNjYWxlLTk1IGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdhcC0zIiwgY2hpbGRyZW46IFtfanN4KCJzdmciLCB7IGNsYXNzTmFtZTogInctNiBoLTYiLCBmaWxsOiAibm9uZSIsIHN0cm9rZTogImN1cnJlbnRDb2xvciIsIHZpZXdCb3g6ICIwIDAgMjQgMjQiLCBjaGlsZHJlbjogX2pzeCgicGF0aCIsIHsgc3Ryb2tlTGluZWNhcDogInJvdW5kIiwgc3Ryb2tlTGluZWpvaW46ICJyb3VuZCIsIHN0cm9rZVdpZHRoOiAyLCBkOiAiTTQgMTZ2MWEzIDMgMCAwMDMgM2gxMGEzIDMgMCAwMDMtM3YtMW0tNC00bC00IDRtMCAwbC00LTRtNCA0VjQiIH0pIH0pLCAiVFx1MDBDOUxcdTAwQzlDSEFSR0VSIE1BSU5URU5BTlQiXSB9KSkgfSksIF9qc3goInAiLCB7IGNsYXNzTmFtZTogInRleHQtWzEwcHhdIHRleHQtZ3JheS01MDAgaXRhbGljIiwgY2hpbGRyZW46ICJTaSBsZSB0XHUwMEU5bFx1MDBFOWNoYXJnZW1lbnQgbmUgZFx1MDBFOW1hcnJlIHBhcyBhcHJcdTAwRThzIGF2b2lyIGNsaXF1XHUwMEU5LCB2XHUwMEU5cmlmaWV6IHZvdHJlIGNvbm5leGlvbiBvdSByXHUwMEU5ZXNzYXllei4iIH0pXSB9KSwgX2pzeCgiZGl2IiwgeyBjbGFzc05hbWU6ICJ3LWZ1bGwgYmctZ3JheS04MDAgaC02MCByb3VuZGVkLWxnIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGJvcmRlciBib3JkZXItZ3JheS03MDAgbWItNiIsIGNoaWxkcmVuOiBfanN4KCJwIiwgeyBjbGFzc05hbWU6ICJ0ZXh0LXhzIHRleHQtZ3JheS01MDAiLCBjaGlsZHJlbjogIkJBTk5JXHUwMEM4UkUgUFVCTElDSVRBSVJFIiB9KSB9KSwgX2pzeHMoImRpdiIsIHsgY2xhc3NOYW1lOiAidGV4dC1jZW50ZXIgc3BhY2UteS00IG10LTQiLCBjaGlsZHJlbjogW19qc3goInAiLCB7IGNsYXNzTmFtZTogInRleHQteHMgdGV4dC1ncmF5LTQwMCIsIGNoaWxkcmVuOiAiQ29tbWVudCBpbnN0YWxsZXIgdW4gcHJlc2V0IEZMTSA/IiB9KSwgX2pzeCgiYSIsIHsgaHJlZjogIiMiLCBjbGFzc05hbWU6ICJ0ZXh0LXhzIHRleHQtWyNiODg2MGJdIHVuZGVybGluZSBmb250LWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVyIiwgY2hpbGRyZW46ICJWb2lyIGxlIHR1dG9yaWVsIHZpZFx1MDBFOW8iIH0pXSB9KV0gfSkpOwp9OwpleHBvcnQgZGVmYXVsdCBEb3dubG9hZFBhZ2U7Cg==","@/vite.config":"data:application/javascript;base64,aW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAndml0ZSc7CmltcG9ydCByZWFjdCBmcm9tICdAdml0ZWpzL3BsdWdpbi1yZWFjdCc7Ci8vIFJlbXBsYWNleiAndHdiLXBsdWcnIHBhciBsZSBub20gZGUgdm90cmUgZMOpcMO0dCBHaXRIdWIKZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHsKICAgIHBsdWdpbnM6IFtyZWFjdCgpXSwKICAgIGJhc2U6ICcuLycsIC8vIEltcG9ydGFudCBwb3VyIEdpdEh1YiBQYWdlcwp9KTsK"}}</script>
+        <script>
+          window.APPLET_FILES = ["index.tsx","metadata.json","index.html","types.ts","constants.tsx","App.tsx","components/Logo.tsx","components/LinkButton.tsx","pages/HomePage.tsx","pages/CategoryPage.tsx","pages/DownloadPage.tsx","package.json","vite.config.ts","README.md","tsconfig.json"];
+          </script>
+        <script type="module">
+        (() => {
+  if (window.self === window.top) {
+    // Do not run the shim in the main window, only in iframes.
+    return;
+  }
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: #ffffff;
-  text-align: center;
-  padding: 30px;
-}
+  window.API_KEY = 'GEMINI_API_KEY';
+  window.GEMINI_API_KEY = 'GEMINI_API_KEY';
+  window.process = window.process || {};
+  window.process.env = window.process.env || {};
+  window.process.env.API_KEY = window.API_KEY;
+  window.process.env.GEMINI_API_KEY = window.GEMINI_API_KEY;
 
-.container {
-  max-width: 400px;
-  margin: auto;
-}
+  const bootstrapChannel = new Promise((resolve) => {
+    window.addEventListener('message', (event) => {
+      if (event.origin !== 'https://aistudio.google.com') {
+        return;
+      }
 
-h1 {
-  font-size: 22px;
-}
+      if (event.data.type === 'bootstrap') {
+        resolve({
+          port: event.ports[0],
+          urlPatterns:
+              event.data.urlPatterns.map((pattern) => new RegExp(pattern)),
+        });
+      }
+    });
+  });
 
-p {
-  font-size: 14px;
-  opacity: 0.8;
-}
+  window.aistudio = window.aistudio || {
+    handleFullscreenEsc: true,
+    getHostUrl: async function() {
+      const hostPort = (await bootstrapChannel).port;
+      return new Promise((resolve) => {
+        const channel = new MessageChannel();
+        hostPort.postMessage(
+            {type: 'get_host_url'},
+            [channel.port2]);
+        const port = channel.port1;
+        port.onmessage = (message) => {
+          resolve(message.data.url);
+        };
+      });
+    },
+    hasSelectedApiKey: async function() {
+      const hostPort = (await bootstrapChannel).port;
+      return new Promise((resolve) => {
+        const channel = new MessageChannel();
+        hostPort.postMessage(
+            {type: 'has_selected_api_key'},
+            [channel.port2]);
+        const port = channel.port1;
+        port.onmessage = (message) => {
+          resolve(message.data);
+        };
+      });
+    },
+    openSelectKey: async function() {
+      const hostPort = (await bootstrapChannel).port;
+      const channel = new MessageChannel();
+      hostPort.postMessage(
+          {type: 'open_select_key'},
+          [channel.port2]);
+    },
+    getModelQuota: async function(model) {
+      const hostPort = (await bootstrapChannel).port;
+      return new Promise((resolve) => {
+        const channel = new MessageChannel();
+        hostPort.postMessage(
+            {type: 'get_model_quota', model},
+            [channel.port2]);
+        const port = channel.port1;
+        port.onmessage = (message) => {
+          resolve(message.data.modelQuota);
+        };
+      });
+    },
+  };
 
-#countdown {
-  font-size: 18px;
-  margin: 20px 0;
-}
+  const nativeFetch = window.fetch;
 
-button {
-  background: #444;
-  color: #aaa;
-  border: none;
-  padding: 15px;
-  width: 100%;
-  font-size: 16px;
-  border-radius: 8px;
-}
+  /**
+   * @param {string | URL | Request} resource The resource of the fetch request.
+   * @param {RequestInit} options The options of the fetch request.
+   * @return {Promise!} The promise of the fetch request.
+   */
+  async function fetch(resource, options) {
+    const config = await bootstrapChannel;
 
-button.active {
-  background: #1db954;
-  color: #fff;
-  cursor: pointer;
-}
-</style>
-</head>
+    const request = resource instanceof Request ?
+      resource.clone() :
+      new Request(resource, options);
 
-<body>
+    if (!config.urlPatterns.some((pattern) => request.url.match(pattern))) {
+      return nativeFetch(resource, options);
+    }
+    const hostPort = config.port;
 
-<div class="container">
-  <h1>DWP Preset – FL Studio Mobile</h1>
-  <p>Please wait for the download link</p>
+    const channel = new MessageChannel();
+    const port = channel.port1;
+    let bodyBytes;
+    const transfer = [channel.port2];
+    const parts = [];
+    const buffer = await request.arrayBuffer();
+    if (buffer.byteLength) {
+      bodyBytes = buffer;
+      transfer.push(bodyBytes);
+    }
+    hostPort.postMessage(
+        {
+          type: 'fetch',
+          url: request.url,
+          method: request.method,
+          headers: [...request.headers.entries()],
+          body: bodyBytes,
+        },
+        transfer);
 
-  <!-- PUBS (Adsterra ici plus tard) -->
-  <!-- PASTE ADSTERRA CODE BELOW -->
-  
-  <div id="countdown">Wait 30 seconds...</div>
+    let streamController;
+    const body = new ReadableStream({
+      start(controller) {
+        streamController = controller;
+      },
+    });
+    let resolveReceive;
+    const receivePromise = new Promise((resolve) => {
+      resolveReceive = resolve;
+    });
+    port.onmessage = (message) => {
+      switch (message.data.type) {
+        case 'response':
+          resolveReceive(new Response(body, {
+            status: message.data.status,
+            statusText: message.data.statusText,
+            headers: new Headers(message.data.headers),
+          }));
+          break;
+        case 'body':
+          streamController.enqueue(message.data.data);
+          break;
+        case 'body_done':
+          streamController.close();
+          break;
+      }
+    };
+    return receivePromise;
+  }
 
-  <button id="downloadBtn" disabled>
-    Download
-  </button>
-</div>
+  Object.defineProperty(window, 'fetch', {
+    get: function() {
+      return fetch;
+    },
+  });
 
-<script>
-let timeLeft = 30;
-let countdown = document.getElementById("countdown");
-let button = document.getElementById("downloadBtn");
-
-let timer = setInterval(() => {
-  timeLeft--;
-  countdown.textContent = "Wait " + timeLeft + " seconds...";
-
-  if (timeLeft <= 0) {
-    clearInterval(timer);
-    countdown.textContent = "Download ready";
-    button.disabled = false;
-    button.classList.add("active");
-    button.onclick = () => {
-      window.location.href = "https://www.mediafire.com/YOUR_LINK_HERE";
+  // See details in: https://github.com/angular/angular/issues/63064.
+  function patchHistoryStateFunctionForAngular(originalFn, baseHref) {
+    return (state, unused, url) => {
+      if (typeof url === 'string' && !url.startsWith('blob:')) {
+        url = baseHref + url;
+      }
+      return originalFn.apply(window.history, [state, unused, url]);
     };
   }
-}, 1000);
-</script>
 
-</body>
-</html>
+  if (false) {
+    const baseHref = window.location.href;
+    window.history.replaceState = patchHistoryStateFunctionForAngular(window.history.replaceState, baseHref);
+    window.history.pushState = patchHistoryStateFunctionForAngular(window.history.pushState, baseHref);
+  }
+
+  const originalWebSocket = window.WebSocket;
+  class ProxiedWebSocket extends EventTarget {
+    /**
+     * @param {string} url The url of the websocket.
+     * @param {Object!} protocols The protocols of the websocket.
+     */
+    constructor(url, protocols) {
+      super();
+      this.url = url;
+      this.protocols = protocols;
+
+      this.open();
+    }
+
+    /** Opens the websocket. */
+    async open() {
+      const hostPort = (await bootstrapChannel).port;
+      const channel = new MessageChannel();
+      hostPort.postMessage(
+          {type: 'websocket_open', url: this.url, protocols: this.protocols},
+          [channel.port2]);
+      this.port = channel.port1;
+      this.port.onmessage = (message) => {
+        if (message.data.type === 'close') {
+          const event = new CloseEvent('close', {
+            code: message.data.code,
+            reason: message.data.reason,
+            wasClean: message.data.wasClean,
+          });
+          if (this.onclose) {
+            this.onclose(event);
+          }
+          this.dispatchEvent(event);
+          return;
+        } else if (message.data.type === 'open') {
+          const event = new Event('open');
+          if (this.onopen) {
+            this.onopen(event);
+          }
+          this.dispatchEvent(event);
+          return;
+        } else if (message.data.type === 'message') {
+          let data = message.data.data;
+          if (message.data.messageType === 'text' || message.data.messageType === 'message') {
+            data = new TextDecoder().decode(data);
+          }
+          const event = new MessageEvent('message', {
+            data,
+            type: message.data.messageType,
+          });
+          if (this.onmessage) {
+            this.onmessage(event);
+          }
+          this.dispatchEvent(event);
+          return;
+        } else if (message.data.type === 'error') {
+          const event = new ErrorEvent('error', {
+            message: message.data.message,
+          });
+          if (this.onerror) {
+            this.onerror(event);
+          }
+          this.dispatchEvent(event);
+          return;
+        }
+        console.error('received unknown message in frame', event.data);
+      };
+    }
+    /**
+     * @param {string|ArrayBuffer!} data The data to send.
+     */
+    send(data) {
+      if (typeof data === 'string') {
+        this.port.postMessage({type: 'send', data});
+      } else {
+        this.port.postMessage({type: 'send', data}, [data.buffer]);
+      }
+    }
+
+    /**
+     * @param {number} code The code of the close event.
+     * @param {string} reason The reason of the close event.
+     */
+    close(code, reason) {
+      this.port.postMessage({type: 'close', code, reason});
+    }
+  }
+
+  /**
+   * @param {string} url The url of the websocket.
+   * @param {Object!} protocols The protocols of the websocket.
+   * @return {WebSocket!} The websocket.
+   */
+  function createWebSocket(url, protocols) {
+    // This should come from the bootstrap channel, but we want this to
+    // work for the synchronous constructor here.
+    if (url.startsWith('wss://generativelanguage.googleapis.com/')) {
+      return Reflect.construct(ProxiedWebSocket, [url, protocols]);
+    }
+    return Reflect.construct(originalWebSocket, [url, protocols]);
+  }
+
+  Object.defineProperty(window, 'WebSocket', {
+    get: function() {
+      return createWebSocket;
+    },
+  });
+
+  async function instrumentErrorReporting() {
+    const errors = [];
+    let hostPort;
+
+    function reportError(message) {
+      if (!hostPort) {
+        errors.push(message);
+      } else {
+        hostPort.postMessage({type: 'error', message: message}, message);
+      }
+    }
+
+    function serialize(args) {
+      return args.map((a) => {
+        if (a instanceof Error || a instanceof ErrorEvent) {
+          return a.message;
+        }
+        if(a instanceof CloseEvent) {
+          return {code: a.code, reason: a.reason, wasClean: a.wasClean};
+        }
+        if( a instanceof Map) {
+          return JSON.parse(JSON.stringify([...a.entries()]));
+        }
+        if( a instanceof Set) {
+          return JSON.parse(JSON.stringify([...a.values()]));
+        }
+        if (a instanceof Object) {
+          return JSON.parse(JSON.stringify(a));
+        }
+        return a;
+      });
+    }
+
+    const originalConsole = window.console;
+    const originalConsoleLog = window.console.log;
+    const originalConsoleError = window.console.error;
+    const originalConsoleWarn = window.console.warn;
+    const originalConsoleDebug = window.console.debug;
+    window.console = {
+      ...originalConsole,
+      log: (message, ...args) => {
+        originalConsoleLog.apply(window.console, [message, ...args]);
+        const combined = serialize([message, ...args]);
+        reportError({type: 'console_log', message: combined });
+      },
+      debug: (message, ...args) => {
+        originalConsoleDebug.apply(window.console, [message, ...args]);
+        const combined = serialize([message, ...args]);
+        reportError({type: 'console_debug', message: combined });
+      },
+      error: (message, ...args) => {
+        originalConsoleError.apply(window.console, [message, ...args]);
+        const combined = serialize([message, ...args]);
+        reportError({type: 'console_error', message: combined });
+      },
+      warn: (message, ...args) => {
+        originalConsoleWarn.apply(window.console, [message, ...args]);
+        const combined = serialize([message, ...args]);
+        reportError({type: 'console_warn', message: combined });
+      },
+    };
+
+    window.onerror = (message, source, lineno, colno, error) => {
+      reportError({type: 'error', message: serialize([message]), source, lineno, colno, error});
+    };
+
+    window.onunhandledrejection = (event) => {
+      reportError({type: 'unhandledrejection', message: serialize([event.reason])});
+    };
+
+    window.alert = (message) => {
+      reportError({type: 'alert', message: serialize([message]) });
+    };
+
+    hostPort = (await bootstrapChannel).port;
+    for(const error of errors) {
+      hostPort.postMessage({type: 'error', message: error});
+    }
+  }
+
+  const availableFiles = new Set(window.APPLET_FILES || []);
+
+  instrumentErrorReporting();
+
+  if (false) {
+    const notifyLocationChange = async () => {
+      const hostPort = (await bootstrapChannel).port;
+      hostPort.postMessage({type: 'locationchange', href: location.href});
+    };
+
+    // Send initial state on load.
+    notifyLocationChange();
+
+    const originalPushState = history.pushState;
+    history.pushState = (...args) => {
+      originalPushState.apply(history, args);
+      notifyLocationChange();
+    };
+
+    const originalReplaceState = history.replaceState;
+    history.replaceState = (...args) => {
+      originalReplaceState.apply(history, args);
+      notifyLocationChange();
+    };
+    window.addEventListener('popstate', (e) => {
+      notifyLocationChange();
+    });
+  }
+
+  window.addEventListener('hashchange', async (e) =>{
+    const config = await bootstrapChannel;
+    const hostPort = config.port;
+    hostPort.postMessage({type: 'hashchange', hash: window.location.hash});
+    if (false) {
+      hostPort.postMessage({
+        type: 'locationchange',
+        href: location.href,
+      });
+    }
+  });
+
+  if (true) {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/html2canvas-pro';
+    script.onload = () => {
+      window.addEventListener('message', async (event) => {
+        if (event.data?.type === 'capture-screenshot') {
+          try {
+            const canvas = await html2canvas(document.documentElement, {
+              logging: false,
+              useCORS: true,
+              backgroundColor: null,
+              scale: 1,
+            });
+            const hostPort = (await bootstrapChannel).port;
+            hostPort.postMessage(
+              {
+                type: 'screenshot-result',
+                dataUrl: canvas.toDataURL('image/png'),
+                requestId: event.data.requestId,
+                scrollX: document.body.scrollLeft,
+                scrollY: document.body.scrollTop,
+              },
+            );
+          } catch (e) {
+            const hostPort = (await bootstrapChannel).port;
+            hostPort.postMessage(
+              {
+                type: 'screenshot-error',
+                error: e.message,
+                requestId: event.data.requestId,
+              });
+          }
+        }
+      });
+    };
+    document.head.appendChild(script);
+  }
+
+  if (false) {
+    const MAX_ANCESTOR_LEVEL = 3;
+    const MAX_DESCENDANT_LEVEL = 3;
+
+    function getElementSelector(el) {
+      if (!el || el.nodeType !== 1) {
+        return '';
+      }
+      const parts = [];
+      while(el && el.nodeType === 1 && el.tagName.toLowerCase() !== 'body') {
+        let part = el.tagName.toLowerCase();
+        if (el.id) {
+          part += '#' + CSS.escape(el.id);
+        }
+
+        const parent = el.parentElement;
+        if (parent) {
+          let nth = 1;
+          let prev = el.previousElementSibling;
+          while(prev) {
+            if (prev.tagName === el.tagName) {
+              nth++;
+            }
+            prev = prev.previousElementSibling;
+          }
+          part += ':nth-of-type(' + nth + ')';
+        }
+
+        parts.unshift(part);
+        el = el.parentElement;
+      }
+      return parts.join(' > ');
+    }
+
+    function getDomTreeAsString(element, depth, maxDepth) {
+      if (!element || element.nodeType !== 1 || depth > maxDepth) {
+        return '';
+      }
+      const tagName = element.tagName.toLowerCase();
+      let attrs = [];
+      if (element.id) {
+        attrs.push('id="' + element.id + '"');
+      }
+      if (element.classList.length > 0) {
+        attrs.push('class="' + element.classList.value + '"');
+      }
+      const attrString = attrs.length > 0 ? ' ' + attrs.join(' ') : '';
+
+      let content = '';
+      for (const node of element.childNodes) {
+        if (node.nodeType === 1) { // Element node
+          content += getDomTreeAsString(node, depth + 1, maxDepth);
+        } else if (node.nodeType === 3) { // Text node
+          content += node.textContent;
+        }
+      }
+
+      return '<' + tagName + attrString + '>' + content + '</' + tagName + '>';
+    }
+
+    function getElementInfo(element) {
+      const selector = getElementSelector(element);
+      let levelsUp = 0;
+      let root = element;
+      while(levelsUp < MAX_ANCESTOR_LEVEL && root.parentElement && root.parentElement.tagName.toLowerCase() !== 'html') {
+        root = root.parentElement;
+        levelsUp++;
+      }
+      const domString = getDomTreeAsString(root, 0, levelsUp + MAX_DESCENDANT_LEVEL);
+      const styles = window.getComputedStyle(element);
+      const css = {};
+      for (let i = 0; i < styles.length; i++) {
+        const key = styles[i];
+        css[key] = styles.getPropertyValue(key);
+      }
+      return { selector, domString, css };
+    }
+
+    const style = document.createElement('style');
+    style.textContent =
+    '.aistudio-hover-highlight { box-shadow: inset 0 0 0 0.5px white, inset 0 0 0 1.5px rgba(128,128,128,0.6) !important; }' +
+    '.aistudio-active-highlight { box-shadow: inset 0 0 0 0.5px white, inset 0 0 0 1.5px #87a9ff !important; }' +
+    '#aistudio-focus-mode-tag { position: absolute; display: none; background: #87a9ff; border-radius: 4px; border: 0.5px solid white; z-index: 10000; text-transform: lowercase; padding: 2px 4px; color: #32302c; font-family: Inter, sans-serif; font-size: 12px; font-style: normal; font-weight: 400; line-height: 16px; pointer-events: none; }' +
+    '#aistudio-hover-mode-tag { position: absolute; display: none; background: rgba(128,128,128,0.6); border-radius: 4px; border: 0.5px solid white; z-index: 10000; text-transform: lowercase; padding: 2px 4px; color: white; font-family: Inter, sans-serif; font-size: 12px; font-style: normal; font-weight: 400; line-height: 16px; pointer-events: none; }';
+    document.head.appendChild(style);
+
+    let hoveredElement = null;
+    let activeElement = null;
+    let focusTag = null;
+    let hoverTag = null;
+    let resizeObserver = null;
+    let iframeLoaded = false;
+    let designModeEnabled = false;
+
+    function ensureFocusTag() {
+      if (!focusTag) {
+        focusTag = document.createElement('div');
+        focusTag.id = 'aistudio-focus-mode-tag';
+        document.body.appendChild(focusTag);
+      }
+    }
+
+    function cleanupActiveElement() {
+      if (!activeElement) return;
+      activeElement.classList.remove('aistudio-active-highlight');
+      activeElement.removeAttribute('data-aistudio-tag-name');
+      if (resizeObserver) {
+        resizeObserver.unobserve(activeElement);
+      }
+      window.removeEventListener('resize', positionFocusTag);
+      window.removeEventListener('scroll', positionFocusTag, true);
+    }
+
+    function positionFocusTag() {
+      requestAnimationFrame(() => {
+        if (!activeElement || !focusTag) return;
+        focusTag.style.display = 'inline-flex';
+        const rect = activeElement.getBoundingClientRect();
+        focusTag.style.top = (rect.top + window.scrollY - focusTag.offsetHeight - 5) + 'px';
+        focusTag.style.left = (rect.left + window.scrollX) + 'px';
+      });
+    }
+
+    function positionHoverTag() {
+      if (!hoveredElement || !hoverTag || hoveredElement === activeElement) {
+        if (hoverTag) hoverTag.style.display = 'none';
+        return;
+      }
+      requestAnimationFrame(() => {
+        hoverTag.style.display = 'inline-flex';
+        const rect = hoveredElement.getBoundingClientRect();
+        hoverTag.style.top = (rect.top + window.scrollY - hoverTag.offsetHeight - 5) + 'px';
+        hoverTag.style.left = (rect.left + window.scrollX) + 'px';
+      });
+    }
+
+    if (window.ResizeObserver) {
+      resizeObserver = new ResizeObserver(() => {
+        positionFocusTag();
+      });
+    }
+
+    function setHoveredElement(element) {
+      if (!designModeEnabled || !iframeLoaded) return;
+
+      if (!hoverTag) {
+        hoverTag = document.createElement('div');
+        hoverTag.id = 'aistudio-hover-mode-tag';
+        document.body.appendChild(hoverTag);
+      }
+
+      if (hoveredElement && hoveredElement !== activeElement) {
+        hoveredElement.classList.remove('aistudio-hover-highlight');
+      }
+      hoverTag.style.display = 'none';
+
+      hoveredElement = element;
+
+      if (hoveredElement && hoveredElement !== activeElement) {
+        hoveredElement.classList.add('aistudio-hover-highlight');
+        hoverTag.textContent = hoveredElement.tagName.toLowerCase();
+        positionHoverTag();
+      }
+    }
+
+    async function setActiveElement(element) {
+      if (!designModeEnabled || !iframeLoaded) return;
+
+      ensureFocusTag();
+      cleanupActiveElement();
+      focusTag.style.display = 'none';
+
+      // Clear hover from new active element if it was hovered
+      if (element) {
+        element.classList.remove('aistudio-hover-highlight');
+      }
+
+      activeElement = element;
+
+      if (activeElement) {
+        activeElement.setAttribute('data-aistudio-tag-name', activeElement.tagName);
+        activeElement.classList.add('aistudio-active-highlight');
+        focusTag.textContent = activeElement.tagName.toLowerCase();
+        positionFocusTag();
+        if (resizeObserver) {
+          resizeObserver.observe(activeElement);
+        }
+        window.addEventListener('resize', positionFocusTag);
+        window.addEventListener('scroll', positionFocusTag, true);
+
+        // Notify host about selected element
+        const info = getElementInfo(activeElement);
+        window.parent.postMessage({
+          type: 'element-selected',
+          element: info,
+        }, '*');
+      }
+    }
+
+    function onMouseMove(e) {
+      if (!designModeEnabled) return;
+      const element = document.elementFromPoint(e.clientX, e.clientY);
+      setHoveredElement(element);
+    }
+
+    function onClick(e) {
+      if (!designModeEnabled) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const element = document.elementFromPoint(e.clientX, e.clientY);
+      setActiveElement(element);
+    }
+
+    function enableDesignMode() {
+      if (designModeEnabled) return;
+      designModeEnabled = true;
+      document.addEventListener('mousemove', onMouseMove, true);
+      document.addEventListener('click', onClick, true);
+    }
+
+    function disableDesignMode() {
+      if (!designModeEnabled) return;
+      document.removeEventListener('mousemove', onMouseMove, true);
+      document.removeEventListener('click', onClick, true);
+      setHoveredElement(null);
+      clearActiveElement();
+      designModeEnabled = false;
+    }
+
+    function clearActiveElement() {
+      ensureFocusTag();
+      cleanupActiveElement();
+      focusTag.style.display = 'none';
+      activeElement = null;
+    }
+
+    window.addEventListener('load', () => {
+      iframeLoaded = true;
+    });
+
+    window.addEventListener('message', async (event) => {
+      if (event.data?.type === 'set-design-mode') {
+        if (event.data.enabled) {
+          enableDesignMode();
+        } else {
+          disableDesignMode();
+        }
+      } else if (event.data?.type === 'highlight-element-by-selector') {
+        try {
+          const selector = event.data.selector;
+          if (selector) {
+            const element = document.querySelector(selector);
+            setActiveElement(element);
+          } else {
+            setActiveElement(null);
+          }
+        } catch (e) {
+          setActiveElement(null);
+        }
+      } else if (event.data?.type === 'get-element-at-point') {
+        try {
+          const element = document.elementFromPoint(
+            event.data.x,
+            event.data.y,
+          );
+          const hostPort = (await bootstrapChannel).port;
+          if (!element) {
+            hostPort.postMessage({
+              type: 'element-at-point-error',
+              error: 'No element found at point',
+              requestId: event.data.requestId,
+            });
+            return;
+          }
+          const info = getElementInfo(element);
+          hostPort.postMessage({
+            type: 'element-at-point-result',
+            element: {
+              ...info,
+              x: event.data.x,
+              y: event.data.y,
+            },
+            requestId: event.data.requestId,
+          });
+        } catch (e) {
+          const hostPort = (await bootstrapChannel).port;
+          hostPort.postMessage({
+            type: 'element-at-point-error',
+            error: e.message,
+            requestId: event.data.requestId,
+          });
+        }
+      } else if (event.data?.type === 'change-element-style') {
+        try {
+          const selector = event.data.selector;
+          if (selector) {
+            const element = document.querySelector(selector);
+            if (element) {
+              element.style.setProperty(
+                event.data.property,
+                event.data.value,
+                'important',
+              );
+              positionFocusTag();
+            }
+          }
+        } catch (e) {}
+      }
+    });
+  }
+
+  window.addEventListener('keydown', async (event) => {
+    if (event.key === 'Escape' && window.aistudio?.handleFullscreenEsc) {
+      const hostPort = (await bootstrapChannel).port;
+      hostPort.postMessage({type: 'exit-fullscreen'});
+    }
+  });
+})();
+// # sourceURL=iframe_shim.js
+        </script>
+        <base href="https://ai.studio">
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWB Plug | Presets Rare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(180deg, #b8860b 0%, #000000 100%);
+            min-height: 100vh;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}.mt-auto{margin-top:auto}.flex{display:flex}.h-24{height:6rem}.h-3{height:0.75rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-24{width:6rem}.w-3{width:0.75rem}.w-5{width:1.25rem}.w-full{width:100%}.max-w-md{max-width:28rem}.max-w-xs{max-width:20rem}.flex-auto{flex:1 1 auto}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.select-none{-webkit-user-select:none;user-select:none}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-6{gap:1.5rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-4{border-width:4px}.border-black{--tw-border-opacity:1;border-color:rgb(0 0 0 / var(--tw-border-opacity, 1))}.border-white\/10{border-color:rgb(255 255 255 / 0.1)}.bg-\[\#b8860b\]{--tw-bg-opacity:1;background-color:rgb(184 134 11 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-opacity-90{--tw-bg-opacity:0.9}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pt-10{padding-top:2.5rem}.text-center{text-align:center}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-widest{letter-spacing:0.1em}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-white\/20{color:rgb(255 255 255 / 0.2)}.opacity-50{opacity:0.5}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-white\/20:hover{background-color:rgb(255 255 255 / 0.2)}.hover\:text-\[\#b8860b\]:hover{--tw-text-opacity:1;color:rgb(184 134 11 / var(--tw-text-opacity, 1))}.hover\:text-white\/60:hover{color:rgb(255 255 255 / 0.6)}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}</style><script src="https://cdn.jsdelivr.net/npm/html2canvas-pro"></script></head>
+<body class="gradient-bg text-white">
+    <div id="root"><div class="max-w-md mx-auto min-h-screen flex flex-auto flex-col px-6 py-10 overflow-x-hidden"><div class="flex flex-col items-center animate-fadeIn"><div class="flex flex-col items-center mb-6"><div class="w-24 h-24 bg-[#b8860b] rounded-full flex items-center justify-center border-4 border-black shadow-xl mb-4 overflow-hidden bg-opacity-90"><span class="text-4xl font-bold text-black select-none">TWB</span></div><h1 class="text-3xl font-bold tracking-tight">TWB Plug</h1></div><p class="text-center text-sm text-gray-300 mb-10 max-w-xs leading-relaxed italic">"Presets FL Studio Mobile très rares pour chorales, voix et instruments"</p><div class="w-full space-y-1"><a class="w-full py-4 px-6 rounded-xl flex items-center justify-between transition-all duration-300 transform active:scale-95 shadow-md mb-4 text-lg font-semibold border bg-white/10 hover:bg-white/20 border-white/10 text-white" href="blob:https://0srq0uuu7g4xrbft90ishti0u23vbml0uc4c0ct6e7ear45pow-h861731785.scf.usercontent.goog/7e10f998-a4f0-41ac-be29-4e6503fd2a28#/category/choir-essentials" data-discover="true"><span class="flex items-center gap-3"><span>🎶</span>Choir Essentials</span><svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a><a class="w-full py-4 px-6 rounded-xl flex items-center justify-between transition-all duration-300 transform active:scale-95 shadow-md mb-4 text-lg font-semibold border bg-white/10 hover:bg-white/20 border-white/10 text-white" href="blob:https://0srq0uuu7g4xrbft90ishti0u23vbml0uc4c0ct6e7ear45pow-h861731785.scf.usercontent.goog/7e10f998-a4f0-41ac-be29-4e6503fd2a28#/category/vocal-packs" data-discover="true"><span class="flex items-center gap-3"><span>🎤</span>Vocal Packs</span><svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a><a class="w-full py-4 px-6 rounded-xl flex items-center justify-between transition-all duration-300 transform active:scale-95 shadow-md mb-4 text-lg font-semibold border bg-white/10 hover:bg-white/20 border-white/10 text-white" href="blob:https://0srq0uuu7g4xrbft90ishti0u23vbml0uc4c0ct6e7ear45pow-h861731785.scf.usercontent.goog/7e10f998-a4f0-41ac-be29-4e6503fd2a28#/category/rare-instruments" data-discover="true"><span class="flex items-center gap-3"><span>🎹</span>Rare Instruments</span><svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a></div><div class="mt-12 flex flex-col items-center space-y-4"><p class="text-xs text-gray-400 uppercase tracking-widest">Suivez-nous</p><div class="flex gap-6"><a href="#" class="hover:text-[#b8860b] transition-colors">YouTube</a><a href="#" class="hover:text-[#b8860b] transition-colors">Telegram</a><a href="#" class="hover:text-[#b8860b] transition-colors">Instagram</a></div></div><button class="mt-16 text-[10px] text-white/20 hover:text-white/60 transition-colors flex items-center gap-2 border border-white/10 px-3 py-1 rounded-full"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>Exporter le code (.zip)</button></div><footer class="mt-auto pt-10 text-center opacity-50 text-xs">© 2026 TWB Plug. Tous droits réservés.</footer></div></div>
+
+
+
+        <script type="module" onerror="console.warn('Failed to load the app. Try reloading it.')">import '@/index';</script>
+        </body></html>
