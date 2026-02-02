@@ -1,3 +1,23 @@
-1. Create Repo
-2. Upload All Files
-3. Enable GitHub Pages
+HOW TO INTEGRATE YOUR REAL ADSTERRA ADS:
+
+1. Banners:
+In App.tsx, replace the <AdPlaceholder /> components with your real Adsterra scripts.
+Example of script integration in React:
+Use `useEffect` to dynamically inject the <script> tags provided by Adsterra into the containers.
+
+2. Pop-unders:
+Go to your Adsterra dashboard, copy the "Pop-under" code.
+In the AdsterraPopupLogic component in App.tsx, use the following code:
+useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//your-adsterra-link.js';
+    script.async = true;
+    document.body.appendChild(script);
+}, []);
+
+3. Social Bar:
+The "Social Bar" is very effective for mobile traffic. Integrate it the same way as the Pop-under.
+
+4. AdBlock Detection:
+The current code uses a "Bait" method. If an adblocker is active, it prevents the download button from becoming active and shows an overlay.
+Make sure to test with and without a blocker to verify the behavior.

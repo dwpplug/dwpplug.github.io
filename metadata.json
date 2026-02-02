@@ -1,4 +1,5 @@
 {
-  "name": "DWP PLUG Source",
-  "description": "Full source for GitHub"
+  "name": "FL Mobile Preset Downloader",
+  "description": "A professional landing page for downloading FL Studio Mobile presets with built-in ad-blocker detection, countdown timer, and ad placements.",
+  "requestFramePermissions": []
 }
