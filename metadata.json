@@ -1,5 +1,5 @@
 {
-  "name": "FL Mobile Preset Downloader",
-  "description": "A professional landing page for downloading FL Studio Mobile presets with built-in ad-blocker detection, countdown timer, and ad placements.",
+  "name": "NeonFlow Beat Store",
+  "description": "A modern, responsive beat store with ad-supported download gating and an admin management interface.",
   "requestFramePermissions": []
 }
